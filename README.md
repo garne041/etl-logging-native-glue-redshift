@@ -14,3 +14,12 @@ This notebook is your hands-on tour of how a Delta Lake table changes over time 
 Once you’re comfortable jumping around in time, you lean into the transactional side by running updates and deletes, watching how Delta keeps everything ACID-compliant while you reshape the data. You then finish by optimizing the table so it stays fast even after all those changes, compacting files and improving layout so queries remain snappy instead of slowing down as history grows. Put together, you end up with a realistic playbook: understand your table’s history, safely explore older versions, make targeted fixes, and then tune performance so your Delta tables stay both trustworthy and efficient as they evolve.
 
 ![](images/Delta-Lake-Infographic1.png)​
+
+
+## Reading and Writing Files to S3 
+
+This notebook is your guided walkthrough for working with files in an AWS S3 bucket from Databricks, with a clear focus on CSV and JSON formats. You kick things off with a Markdown heading and an image that lay out the end-to-end workflow: reading files from S3 into Databricks, doing your work, and then writing results back out to S3. 
+
+From there, the notebook splits into focused sections: one for directly connecting to a CSV file in S3 and another for directly connecting to a JSON file in S3. Each section is introduced with Markdown so you always know which file type you’re dealing with before you dive into the code. This structure makes the whole flow feel like a guided tour rather than a random collection of cells, and it also keeps the notebook easy to skim via the table of contents when you only care about a specific format or operation.
+
+![](images/S3-Infographic.svg)
