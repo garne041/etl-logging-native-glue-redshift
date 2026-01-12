@@ -1,5 +1,7 @@
 # ETL Logging Native, Glue, and Redshift 
 
+End-to-end ETL logging and connectivity examples for Databricks using native Delta Lake, AWS Glue, and Amazon Redshift. This repo bundles a small set of focused notebooks that show you how to generate demo data, track changes in Delta tables over time, move data to and from S3 and Redshift, and plug Databricks into Glue-managed and Glue‑backed Iceberg tables. Each notebook pairs code with visual infographics so you can quickly understand both the architecture and the hands‑on steps for building secure, cloud‑native ETL workflows across these systems.
+
 
 ## Setup Notebook
 This notebook walks through a complete, hands-on setup for a Delta Lake demo using synthetic mortgage data. It begins by clearly stating the goal: generate a self-contained dataset that can be used to illustrate key Delta Lake capabilities. It then guides you through creating a realistic mortgage dataset, which serves as the foundation for all subsequent Delta operations. Finally, it shows how to materialize that data as a clustering-ready Delta table, positioning it for later demonstrations of performance optimization and advanced Delta features such as clustering and time-travel queries.
