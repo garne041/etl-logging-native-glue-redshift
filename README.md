@@ -38,3 +38,12 @@ This notebook is your quick way to sanity‑check that Databricks can see and qu
 In this example, I pulled the joy_bronze_customer_data table into a Spark DataFrame and immediately display the first few rows, which lets you confirm that connectivity works, the schema is what you expect, and the sample data looks reasonable before you invest time in deeper transformations.
 
 ![](images/Glue-Infographic.svg)
+
+## Iceberg Tables Managed In Glue & Accessed in Databricks
+This notebook is your guided map for how Databricks talks to AWS Glue Catalog when you’re using Iceberg tables instead of fully managed Delta/Unity Catalog. The main goal is to highlight the Glue ↔ Databricks relationship, especially what “Glue-backed Iceberg in Databricks” actually means in practice. This notebook leans heavily on diagrams and headings to walk you through the architecture: where Glue sits, where Iceberg tables live, how Databricks connects, and how that differs from the native Unity Catalog world.
+​
+
+Once the architecture feels less mysterious, the notebook sets up a section for basic profiling queries so you can actually poke at Glue tables from Databricks—things like looking at schemas, row counts, and sample data. It then lands on an important reality check: because Glue is an external catalog, Databricks is essentially read-only for key governance features here, so you don’t get Delta/UC-style time travel or DESCRIBE HISTORY on these Glue-backed tables. The overall flow gives you a realistic mental model: understand how Glue and Iceberg are wired into Databricks, explore the data with simple queries, and stay very clear about which Delta/Unity Catalog features you can’t rely on in this external setup.
+
+![](images/Iceberg-Glue-Infographic.svg)
+​
