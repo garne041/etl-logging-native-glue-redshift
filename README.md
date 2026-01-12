@@ -31,3 +31,10 @@ This notebook is your quick start for doing a full round-trip between Databricks
 The write step leans on IAM authentication and an S3 bucket as a temporary staging area, so the whole flow stays cloud‑native and secure instead of relying on hard-coded credentials or ad‑hoc file transfers. Put together, it’s the classic ETL loop: read from Redshift, transform in Spark, and write back into Redshift so downstream tools can use the updated data.
 
 ![](images/Redshift-Infographic.svg)
+
+## Glue Managed Tables in Databricks
+This notebook is your quick way to sanity‑check that Databricks can see and query your AWS Glue–managed tables. You start by pointing Spark at the right place: setting the active catalog (which mirrors AWS Glue) and switching into the correct database so every table reference goes against the Glue data you care about. 
+
+In this example, I pulled the joy_bronze_customer_data table into a Spark DataFrame and immediately display the first few rows, which lets you confirm that connectivity works, the schema is what you expect, and the sample data looks reasonable before you invest time in deeper transformations.
+
+![](images/Glue-Infographic.svg)
