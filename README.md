@@ -13,4 +13,4 @@ This notebook is your hands-on tour of how a Delta Lake table changes over time 
 ​
 Once you’re comfortable jumping around in time, you lean into the transactional side by running updates and deletes, watching how Delta keeps everything ACID-compliant while you reshape the data. You then finish by optimizing the table so it stays fast even after all those changes, compacting files and improving layout so queries remain snappy instead of slowing down as history grows. Put together, you end up with a realistic playbook: understand your table’s history, safely explore older versions, make targeted fixes, and then tune performance so your Delta tables stay both trustworthy and efficient as they evolve.
 
-!j[](images/Delta-Lake-Infographic1.png)​
+![](images/Delta-Lake-Infographic1.png)​
