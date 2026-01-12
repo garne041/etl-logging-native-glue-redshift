@@ -23,3 +23,11 @@ This notebook is your guided walkthrough for working with files in an AWS S3 buc
 From there, the notebook splits into focused sections: one for directly connecting to a CSV file in S3 and another for directly connecting to a JSON file in S3. Each section is introduced with Markdown so you always know which file type you’re dealing with before you dive into the code. This structure makes the whole flow feel like a guided tour rather than a random collection of cells, and it also keeps the notebook easy to skim via the table of contents when you only care about a specific format or operation.
 
 ![](images/S3-Infographic.svg)
+
+
+## Redshift Connectivity to Databricks
+This notebook is your quick start for doing a full round-trip between Databricks and Amazon Redshift. You first pull a table out of Redshift into Spark so you can actually see and explore the rows, then you send a cleaned-up or curated DataFrame back into Redshift using the Spark‑Redshift connector. 
+
+The write step leans on IAM authentication and an S3 bucket as a temporary staging area, so the whole flow stays cloud‑native and secure instead of relying on hard-coded credentials or ad‑hoc file transfers. Put together, it’s the classic ETL loop: read from Redshift, transform in Spark, and write back into Redshift so downstream tools can use the updated data.
+
+![](images/Redshift-Infographic.svg)
